@@ -1,16 +1,16 @@
-# egeoffrey-notification-slack
+# egeoffrey-notification-telegram
 
 This is an eGeoffrey notification package.
 
 ## Description
 
-Send a notification through slack.
+Send a notification through Telegram.
 
 ## Install
 
 To install this package, run the following command from within your eGeoffrey installation directory:
 ```
-egeoffrey-cli install egeoffrey-notification-slack
+egeoffrey-cli install egeoffrey-notification-telegram
 ```
 After the installation, remember to run also `egeoffrey-cli start` to ensure the Docker image of the package is effectively downloaded and started.
 To validate the installation, go and visit the *'eGeoffrey Admin'* / *'Packages'* page of your eGeoffrey instance. All the modules, default configuration files and out-of-the-box contents if any will be automatically deployed and made available.
@@ -21,11 +21,10 @@ The following modules are included in this package.
 For each module, if requiring a configuration file to start, its settings will be listed under *'Module configuration'*. Additionally, if the module is a service, the configuration expected to be provided by each registered sensor associated to the service is listed under *'Service configuration'*.
 
 To configure each module included in this package, once started, click on the *'Edit Configuration'* button on the *'eGeoffrey Admin'* / *'Modules'* page of your eGeoffrey instance.
-- **notification/slack**: make a phone call through an attached serial device (just a few rings)
+- **notification/telegram_messenger**: send a notification via Telegram to a user or a group
   - Module configuration:
-    - *bot_token**: the Slack legacy token the chatbot will use to connect to Slack
-    - *bot_name**: the name of the bot as it will show up on Slack (e.g. housebot)
-    - *channel**: the name of the channel the chatbot will send notifications to (e.g. channel_name)
+    - *bot_token**: the token of the Telegram bot you have created (https://core.telegram.org/bots#3-how-do-i-create-a-bot)
+    - *chat_id**: the chat_id you want to send the message to (https://t.me/gettingidbot)
 
 ## Contribute
 
@@ -39,25 +38,25 @@ If you are a user willing to contribute to somebody's else package, submit your 
 
 ## Build
 
-Building is required only if you are the author of the package. To build a Docker image and automatically push it to [Docker Hub](https://hub.docker.com/r/egeoffrey/egeoffrey-notification-slack), run the following command from within this package's directory:
+Building is required only if you are the author of the package. To build a Docker image and automatically push it to [Docker Hub](https://hub.docker.com/r/egeoffrey/egeoffrey-notification-telegram), run the following command from within this package's directory:
 ```
-egeoffrey-cli build egeoffrey-notification-slack <amd64|arm>
+egeoffrey-cli build egeoffrey-notification-telegram <amd64|arm>
 ```
 
 ## Uninstall
 
 To uninstall this package, run the following command from within your eGeoffrey installation directory:
 ```
-egeoffrey-cli uninstall egeoffrey-notification-slack
+egeoffrey-cli uninstall egeoffrey-notification-telegram
 ```
 Remember to run also `egeoffrey-cli start` to ensure the changes are correctly applied.
 ## Tags
 
 The following tags are associated to this package:
 ```
-notification slack
+notification telegram
 ```
 
 ## Version
 
-The version of this egeoffrey-notification-slack is 1.0-10 on the master branch.
+The version of this egeoffrey-notification-telegram is 1.0-1 on the master branch.

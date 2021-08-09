@@ -59,4 +59,4 @@ notification telegram
 
 ## Version
 
-The version of this egeoffrey-notification-telegram is 1.0-2 on the master branch.
+The version of this egeoffrey-notification-telegram is 1.1-1 on the master branch.

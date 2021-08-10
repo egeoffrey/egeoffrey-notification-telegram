@@ -10,7 +10,7 @@ FROM egeoffrey/egeoffrey-sdk-alpine:${SDK_VERSION}-${ARCHITECTURE}
 RUN apk update && apk add musl-dev openssl-dev gcc libffi-dev && rm -rf /var/cache/apk/*
 
 ### install your module's dependencies
-RUN pip install python-telegram-bot
+RUN pip install python-telegram-bot==12.6
 
 ### copy files into the image
 COPY . $WORKDIR
